@@ -1,24 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import FilmContainer from "./containers/FilmContainer";
 
 function App() {
+  function goToWebsite() {
+      window.location.href='https://www.imdb.com/calendar/?region=gb';
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+        <FilmContainer/>
+        <button onClick={() => goToWebsite()}>View more</button>
+      </>
   );
 }
 
